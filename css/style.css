@@ -58,7 +58,7 @@ p {
 div.content {
 	display: flex;
 	grid: auto / 1fr min(50ch, calc(100% - 64px)) 1fr;
-	background-color: royalblue;
+    background-image: linear-gradient(-60deg, royalblue 50%, rgb(114, 175, 216) 50%);
     color: seashell;
 	perspective: 2px;
 	-webkit-perspective: 2px;
