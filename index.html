@@ -1,206 +1,850 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="icon" href="https://i.ibb.co/ZSd93BD/logo.png">
-</head>
-<body>
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100;200;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
-
-<nav>
-    <ul>
-      <li id="cfont">Home</li>
-      <li>|</li>
-      <li id="currentPage">Portfolio</li>
-      <li><a href="" id="pages">Documentation</a></li>
-      <li><a href="" id="pages">Other</a></li>
-    </ul>
-</nav>
-<div style="position: absolute;"></div>
-
-<div class="parallax">
-	<h1 id="cfont">My Portfolio</h1>
-	<h3 style="color: aliceblue;">Arsya Alifian Widiatmoko</h3>
-</div> 
-
-<div class="content">
-	<article>
-		<p id="paragraphTitle">Profiles</p>
-        <p>	&nbsp; Hi!, I am Arsya, an Freelance Web & Android Developer and Front End & Back End Developer based in Indonesia. I enjoy creating Web & apps that are nice and comfortable to use.</p>
-        <p>
-        	&nbsp;I use several different tools when it comes to designing and developing websites & apps. For display I used Adobe Xd and Photoshop to create prototypes and wireframes for the actual design. As for the backend, I use sublime for web and Android studio for applications. With development, I use HTML5, CSS3, Javascript for Web display and XML for application display. As for the backend I use PHP (Laravel) for web and Java for Android. 
-        </p>
-	</article>
-</div>
-
-<div class="shell">
-    <h2 id="cfont">My Skills</h2>
-</div>
-<div class="shell">
-    <div class="wsk-cp-product">
-        <div class="wsk-cp-img">
-          <img src="https://logoeps.com/wp-content/uploads/2011/06/java-logo-vector.png" alt="Product" class="img-responsive"/>
+    <title>My Portfolio</title>
+	<link rel="icon" type="images/x-icon" href="https://drive.google.com/uc?export=view&id=1og6PQpOcDpvw7OItPepdXkLP2vCPH8am" />
+    <!-- Bootstrap core CSS -->
+    <link rel=¨stylesheet¨ type=¨text/css¨ href="style.css">
+    <script src="script.js"></script>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> 
+	<style>
+		html{
+			scroll-behavior: smooth;
+		}
+		* {
+			box-sizing: border-box;
+		}
+		#menu
+		{
+			background-color: #ffffff79;
+		}
+		
+		.starter-template {
+			padding: 40px 15px;
+			text-align: center;
+		}
+		ul.navbar-nav { 
+			float:right;
+			text-align:center;
+		}
+		ul.navbar-nav li 
+		{
+			padding: 0 10px;
+		}
+		@media only screen and (max-width:767px)
+		{ ul.navbar-nav { float:none; } }
+		.container-fluid {
+			padding: 0 1em;
+		}
+		.navbar-nav li a
+		{
+			color:black!important;
+			font-size:1.2em;
+			font-family: Century gothic,sans-serif;
+			font-weight:600;
+			transition: 0.4s ease;
+		}
+		.navbar-nav li a:hover
+		{
+			color:#fff!important;
+			background-color:black!important;
+		}
+		.navbar-brand {
+			padding:10px 15px!important;
+		}
+		a.navbar-brand .fa-globe
+		{
+			font-size: 30px;
+			color: black;
+			transition:0.5s ease;
+		}
+		a.navbar-brand .fa-globe:hover
+		{
+			color: #3935e6;
+		}
+		.navbar-inverse .navbar-toggle .icon-bar {
+			background-color: black!important;
+		}
+		.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+			background-color: #fff!important;
+		}
+		
+		.container {
+			margin: 0 auto;
+			max-width: 996px;
+		}
+		.splash {
+			background:url("https://drive.google.com/uc?export=view&id=11_mFupb69QHnQSRhev78oHCTugL4RvRb") no-repeat fixed center bottom;
+			background-size: cover;
+			color: #fff;
+		}
+		
+		.splash .container {
+			padding-top: 15vh; /* No JS fallback*/
+			padding-bottom: 10vh; /* No JS fallback*/
+		}
+		
+		.profile-image {
+			border-radius: 50%;
+			display: block;
+			max-height:250px;
+			max-width: 250px;
+			margin: 0 auto 1em;
+			width: 100%;
+			opacity: 0.85;
+		}
+		
+		.splash h1 {
+			font-size: 40px;
+			margin-bottom: .15em;
+			text-align: center;
+		}
+		
+		.splash .lead, .splash .continue {
+			display: inline-block;
+			text-align: center;
+		}
+		h1.intro-text
+		{
+			margin:0;
+			color:#fff;
+		}
+		.splash .lead {
+			font-size: 30px;
+			margin-bottom: 1em;
+			font-family: Rockwell;
+		}
+		.navbar-inverse
+		{
+			border:none!important;
+		}
+		@keyframes blink
+			{
+					0% { opacity:1; }
+					50% { opacity:0; }
+					100% { opacity:1; }
+			}
+				@-webkit-keyframes blink
+				{
+					0% { opacity:1; }
+					50% { opacity:0; }
+					100% { opacity:1; }
+				}
+				@-moz-keyframes blink
+				{
+					0% { opacity:1; }
+					50% { opacity:0; }
+					100% { opacity:1; }
+				}
+				@-ms-keyframes blink
+				{
+					0% { opacity:1; }
+					50% { opacity:0; }
+					100% { opacity:1; }
+				}
+				@-o-keyframes blink
+				{
+					0% { opacity:1; }
+					50% { opacity:0; }
+					100% { opacity:1; }
+				}
+		/* code for animated blinking cursor */
+		#typed-cursor
+		{
+				opacity: 1;
+				font-size: 40px;
+				color: #fff;
+				font-weight: 50;
+				-webkit-animation: blink 1s infinite;
+				-moz-animation: blink 1s infinite;
+				-ms-animation: blink 1s infinite;
+				-o-animation: blink 1s infinite;
+				animation: blink 1s infinite;
+		}
+		
+		.splash .continue {
+			font-size: 3em;
+			display:block;
+		}
+		
+		.splash .continue a {
+			border: 2px solid #fff;
+			border-radius: 100%;
+			color: #fff;
+			display: inline-block;
+			text-decoration: none;
+			width: 40px;
+			height:40px;
+			font-size:30px;
+		}
+		.splash .continue a:hover {
+			background-color: rgba(255, 255, 255, .25);
+		}
+		#about,#portfolio,#contact
+		{
+			padding-top:4em!important;
+		}
+		section h2 {
+			margin: 0;
+			font-size: 3em;
+		}
+		section.success {
+			color: #fff;
+			background: rgba(64,64,96,255);
+			padding: 2%;
+		}
+		
+		section.success a
+		{
+			color:black;
+			transition: 0.4s ease;
+		}
+		section.success a:hover {
+			outline: 0;
+			color: #fff;
+			border: 2px solid #fff;
+		}
+		.contact-button
+		{
+			padding-bottom:2%;
+		}
+		hr.star-light,hr.star-portfolio {
+			margin: 25px auto 30px;
+			padding: 0;
+			max-width: 250px;
+			border: 0;
+			border-top: solid 3px;
+			text-align: center;
+		}
+		
+		hr.star-light:after,hr.star-portfolio:after {
+			content: "\f005";
+			display: inline-block;
+			position: relative;
+			top: -.8em;
+			padding: 0 .25em;
+			font-family: FontAwesome;
+			font-size: 2em;
+		}
+		
+		hr.star-light {
+			border-color: #fff;
+		}
+		hr.star-portfolio {
+			border-color: black;
+		}
+		hr.star-portfolio:after {
+			color: black;
+			background-color: #eee;
+		}
+		hr.star-light:after {
+			color: #fff;
+			background-color: rgb(13, 79, 136);
+		}
+		p.content-text { font-size: 25px; }
+		
+		/* PORTFOLIO */
+		.portfolio-card{
+			box-shadow: 0px 2px 5px #888888;
+			background: #eee;
+			border-radius: 4px;
+		}
+		
+		.portfolio-card:hover{
+			box-shadow: 0px 10px 10px #888888;
+			cursor: pointer
+		}
+		
+		.portfolio-container-holder{
+			background: rgba(124,124,149,255);
+			padding-bottom: 20px;
+		}
+		
+		
+		.portfolio-card-holder{
+			padding: 5px;
+			margin-bottom: 5px;
+		}
+		
+		.portfolio-img{
+			height: 100%;
+			width: 100%;
+			border-radius: 4px 4px 0 0;
+		}
+		
+		.portfolio-img-desc{
+			position: relative;
+			bottom: 0px;
+			left: 0px;
+			right: 0px;
+			background: rgba(95,95,125,255);
+			color: #000;
+			text-align: center;
+			padding: 5px;
+		}
+		
+		/* Contact */
+		.contact-me-container{
+			padding:3%;
+			background: rgba(64,64,96,255);
+		}
+		.fa-user,.fa-at,.fa-phone
+		{
+			color:black;
+		}
+		.submit-button{
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+		/* ========================
+		Footer
+		======================== */
+		
+		footer {
+			background-color: rgba(124,124,149,255);
+			color:  #fff;
+			font-size: 1.5em;
+			text-align: center;
+			padding:3%;
+		}
+		a.tel,a.tel:hover
+		{
+			text-decoration:none;
+			color:#fff;
+		}
+		a.social-button {
+			background: #fff;
+			font-size: 20px;
+			border-radius: 50%;
+			margin: 5px;
+		}
+		.address-container{
+			display: inline-block;
+			margin: 0 auto;
+		}
+		a.link-facebook,a.link-twitter,a.link-codepen,a.link-linkedin,a.link-instagram
+		{
+			transition:0.4s ease;
+		}
+		a.link-twitter
+		{
+			color:#1DA1F2;
+		}
+		a.link-facebook
+		{
+		color: #3b5998;
+		}
+		a.link-linkedin
+		{
+			color:#007bb6;
+		}
+		a.link-instagram
+		{
+			color:#e95950;
+		}
+		a.link-facebook:hover{
+			background-color: #3b5998;
+			color: #fff;
+		}
+		
+		a.link-twitter:hover{
+			background-color: #1DA1F2;
+			color: #fff;
+		}
+		
+		a.link-codepen:hover{
+			background-color: black;
+			color: #fff;
+		}
+		
+		a.link-linkedin:hover{
+			background-color: #007bb6;
+			color: #fff;
+		}
+		a.link-instagram:hover{
+			background-color: #e95950;
+			color: #fff;
+		}
+		.btn-default {
+			color: #333;
+			background-color: #fff;
+			border-color: transparent!important;
+		}
+		.fa-heart {
+			color:#f32323;
+		}
+		h4.author
+		{
+			letter-spacing:4px;
+		}
+		hr.footer-hr
+		{
+			width:50%;
+		}
+		hr.copyright
+		{
+			opacity:0.4;
+		}
+	</style>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="menu">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button> 
+          <a class="navbar-brand" href="#"><i class="fa fa-globe"></i></a>
         </div>
-        <div class="wsk-cp-text">
-          <div class="category">
-            <span>Java</span>
-          </div>
-        </div>
-    </div>
-    <div class="wsk-cp-product">
-        <div class="wsk-cp-img">
-          <img src="https://www.updateilmu.com/wp-content/uploads/2014/10/Logo-PHP.png" alt="Product" class="img-responsive" />
-        </div>
-        <div class="wsk-cp-text">
-          <div class="category">
-            <span>PHP</span>
-          </div>
-        </div>
-    </div>
-    <div class="wsk-cp-product">
-        <div class="wsk-cp-img">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/C_Programming_Language.svg/220px-C_Programming_Language.svg.png" alt="Product" class="img-responsive" />
-        </div>
-        <div class="wsk-cp-text">
-          <div class="category">
-            <span>C</span>
-          </div>
-        </div>
-    </div>
-    <div class="wsk-cp-product">
-        <div class="wsk-cp-img">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/363px-CSS3_logo_and_wordmark.svg.png" alt="Product" class="img-responsive" />
-        </div>
-        <div class="wsk-cp-text">
-          <div class="category">
-            <span>CSS</span>
-          </div>
-        </div>
-    </div>
-    <div class="wsk-cp-product">
-        <div class="wsk-cp-img">
-          <img src="https://www.freepnglogos.com/uploads/javascript-png/javascript-logo-transparent-logo-javascript-images-3.png" alt="Product" class="img-responsive" />
-        </div>
-        <div class="wsk-cp-text">
-          <div class="category">
-            <span>Javascript</span>
-          </div>
-        </div>
-    </div>
-</div>
-
-<div class="content">
-        <h2 id="cfont">Mastery</h2>
-</div>
-<div class="content">
-    <div class="dashboard">
-        <p id="meter-1">Java</p>
-        <svg>
-          <circle class="bg" cx="57" cy="57" r="52" />
-          <circle class="meter-1" cx="57" cy="57" r="52" />
-        </svg>
-        <p id="meter-2">C</p>
-        <svg>
-          <circle class="bg" cx="57" cy="57" r="52" />
-          <circle class="meter-2" cx="57" cy="57" r="52" />
-        </svg>
-        <p id="meter-3">C++</p>
-        <svg>
-          <circle class="bg" cx="57" cy="57" r="52" />
-          <circle class="meter-3" cx="57" cy="57" r="52" />
-        </svg>
-        <p id="meter-4">Javascript</p>
-        <svg>
-          <circle class="bg" cx="57" cy="57" r="52" />
-          <circle class="meter-4" cx="57" cy="57" r="52" />
-        </svg>
-        <p id="meter-5">PHP</p>
-        <svg>
-          <circle class="bg" cx="57" cy="57" r="52" />
-          <circle class="meter-5" cx="57" cy="57" r="52" />
-        </svg>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li> 
+          </ul> 
+        </div><!--/.nav-collapse -->
       </div>
+    </div>
+
+<div class="container-fluid splash" id="splash">
+  <div class="container">
+    <img src="https://drive.google.com/uc?export=view&id=1KYpA0j3Wvx53k6sRlUTZDNdJxTWp9vAK" alt="Portrait of Mr. Roboto" class="profile-image"> 
+    <h1>HELLO!</h1> 
+    <h1 class="intro-text"><span class="lead" id="typed">I am a </span></h1>
+    <span class="continue"><a href="#about"><i class="fa fa-angle-down"></i></a></span>
+  </div>
 </div>
-<div>
-    <br><br><br><br><br><br>
-</div>
-<footer>
-
-    <!-- Social media icons line Start -->
-
-      <div class="sm-handle">
-
-              <a href="" class="sm-button">
-
-                      <i class="fab fa-instagram">IG</i>
-
-              </a>
-
-              <a href="" class="sm-button">
-
-                      <i class="fab fa-linkedin">WA</i>
-
-              </a>
-
-              <a href="" class="sm-button">
-
-                      <i class="fab fa-facebook-f">FB</i>
-
-              </a>
-
-              <a href="" class="sm-button">
-
-                      <i class="fab fa-twitter">Twiter</i>
-
-              </a>
-
-              <a href="" class="sm-button">
-
-                      <i class="fab fa-github">Github</i>
-
-              </a>
-
-      </div>
-
-          <!-- Social media icons line Start -->
-
-      <div class="footer-links">
-
-        <div class="menu">
-
-          <h4 class="menu-title">Menu</h4>              
-
-          <a href="#" class="menu-links">Join Me</a>
-
-          <a href="#" class="menu-links">My Blogs</a>
-
-          <a href="#" class="menu-links">My Journey</a>
-
-          <a href="#" class="menu-links">About</a>
-
+        <!-- About Section -->
+    <section class="success" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>About Me</h2>
+                    <hr class="star-light">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-lg-offset-2">
+                    <p class="content-text" style="text-align:justify;">Hi there! I am currently a college student based in Indonesia. As a passionate web developer and android developer, I am constantly honing my skills in these fields and exploring new ways to create exciting and innovative digital solutions.
+                    </p>
+                </div>
+                <div class="col-lg-4">
+                    <p class="content-text">I also have a hobby of drawing anime characters. I love the creativity and expressiveness that comes with bringing these unique characters to life through my art.</p>
+             </div>
+                <div class="col-lg-8 col-lg-offset-2 text-center contact-button">
+                    <a href="#contact" class="btn btn-lg btn-outline">
+                        <i class="fa fa-envelope"></i> Contact Me
+                    </a>
+                </div>
+            </div>
         </div>
+    </section>
+<!-- Portfolio -->
+    <div class="container-fluid portfolio-container-holder content-section" id="portfolio">
+		<div class="portfolio-container container">
+			<h1 class="text-center">My Portfolio</h1>
+      <hr class="star-portfolio">
+			<div class="row">
+				
+				<a href="https://github.com/KiraneTMS/GithubApp"  class="col-md-6 col-xs-12 col-sm-6">
+					<div class="portfolio-card-holder">
+						<div class=" portfolio-card">
+							<img src="https://cdn-icons-png.flaticon.com/512/226/226770.png" alt="Portfolio" class="img-responsive portfolio-img">
+			
+						</div>
+					</div>
+					<div class="portfolio-img-desc">
+						<p>(Android-Kotlin) Github App</p>
+					</div>	
+				</a>
+				<a href="https://github.com/KiraneTMS/PengaduanMasyarakatPaket2"  class="col-md-6 col-xs-12 col-sm-6">
+					<div class="portfolio-card-holder">
+						<div class=" portfolio-card">
+							<img src="https://cdn-icons-png.flaticon.com/512/72/72626.png" alt="Portfolio" class="img-responsive portfolio-img">
+			
+						</div>
+					</div>
+					<div class="portfolio-img-desc">
+						<p>(Web Application-Laravel) Pengaduan Masyarakat</p>
+					</div>	
+				</a>
+				<a href="https://drive.google.com/uc?export=view&id=12Fax8chbIH2noyb1YQ7mlYWE-Xgp7TAz"  class="col-md-6 col-xs-12 col-sm-6">
+					<div class="portfolio-card-holder">
+						<div class=" portfolio-card">
+							<img src="https://static.thenounproject.com/png/3859979-200.png" alt="Portfolio" class="img-responsive portfolio-img">
+			
+						</div>
+					</div>
+					<div class="portfolio-img-desc">
+						<p>(Illustration) Aurluna van Sylvania</p>
+					</div>	
+				</a>
+				<a href="https://drive.google.com/uc?export=view&id=1KYpA0j3Wvx53k6sRlUTZDNdJxTWp9vAK"  class="col-md-6 col-xs-12 col-sm-6">
+					<div class="portfolio-card-holder">
+						<div class=" portfolio-card">
+							<img src="https://static.thenounproject.com/png/3859979-200.png" alt="Portfolio" class="img-responsive portfolio-img">
+			
+						</div>
+					</div>
+					<div class="portfolio-img-desc">
+						<p>(Illustration) Rajaki Arine</p>
+					</div>	
+				</a>
+				<a href="https://github.com/KiraneTMS/Mobile1UTS"  class="col-md-6 col-xs-12 col-sm-6">
+					<div class="portfolio-card-holder">
+						<div class=" portfolio-card">
+							<img src="https://cdn-icons-png.flaticon.com/512/226/226770.png" alt="Portfolio" class="img-responsive portfolio-img">
+			
+						</div>
+					</div>
+					<div class="portfolio-img-desc">
+						<p>Food Transaction</p>
+					</div>	
+				</a>
+				<a href="https://drive.google.com/uc?export=view&id=1zliUy5PaN7GwFF5v8K7ss6CuDDOmviGy"  class="col-md-6 col-xs-12 col-sm-6">
+					<div class="portfolio-card-holder">
+						<div class=" portfolio-card">
+							<img src="https://static.thenounproject.com/png/3859979-200.png" alt="Portfolio" class="img-responsive portfolio-img">
+			
+						</div>
+					</div>
+					<div class="portfolio-img-desc">
+						<p>(Illustration) Rajaki Arine</p>
+					</div>	
+				</a>
+				
+			</div>
+		</div>
+	</div>
+<!-- Contact form -->
+	<div class="container-fluid contact-me-container content-section" id="contact">
+		<div class="container">
+			<h1 class="intro-text text-center">Contact Me</h1>
+      <hr class="star-light">
+			<div class="row">
+				<div class="col-sm-12 col-md-12">
+					<div class="form-group">
+						<div class="input-group">
+							<div class="input-group-addon"><i class="fa fa-user"></i></div>
+							<input type="text" class="form-control" id="name" placeholder="Name">
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<div class="input-group">
+              <div class="input-group-addon"><i class="fa fa-at"></i></div>
+							<input type="text" class="form-control" id="email" placeholder="Email ID">
+						</div>
+					</div>
 
-        <div class="menu">
+					<div class="form-group">
+						<div class="input-group">
+							<div class="input-group-addon"><i class="fa fa-phone"></i></div>
+							<input type="text" class="form-control" id="phone" placeholder="Phone Number">
+						</div>
+					</div>
+				</div>
 
-          <h4 class="menu-title">Other Pages</h4>
+				<div class="col-sm-12">
+					<textarea id="message" class="form-control" rows="5" placeholder="Message"></textarea>
+				</div>
+			</div>
 
-          <a href="#" class="other-links">Contact Me</a>
+			<div class="text-center">
+				<button onclick="sendMail(); return false" class="btn btn-default submit-button btn-lg btn-primary"><i class="fa fa-paper-plane"></i> Send</button>
+			</div>
+		</div>
+	</div>
+<!-- Footer -->
+	<footer>
+		<div class="container footer-container">
+			<div class="row footer-row">
+				<!-- <div class="col-xs-12 col-sm-6 col-md-6 text-center">
+			<h4 class="text-center">Find me here</h4>
+				 	<address>
+					 	<strong><i class="fa fa-location-arrow"></i> Monsters Inc.</strong><br>Lorem ipsum dolor, sir amet,<br>Mumbai, India 400050<br><br>
+					 	<a  class="tel" href="tel:9999988888" type="tel"><i class="fa fa-mobile"></i><span> +91 9876543210</span></a>
+					</address>
+				</div> -->
 
-          <a href="#" class="other-links">Privacy Policy</a>
+				<div class="col-xs-12 col-md-6 col-sm-6 social-section">
+					<div class="text-center">
+						<h4 class="text-center">I can be found here</h4>
+				<div class="text-center social-buttons">
+						<a href="#" class="btn btn-default btn-lg social-button link-facebook"><i class="fa fa-facebook"></i>
+						</a>
 
-          <a href="#" class="other-links">FAQ</a>
+						<a href="#" class="btn btn-default btn-lg social-button link-twitter"><i class="fa fa-twitter"></i>
+						</a>
 
-          <a href="#" class="other-links">Terms of use</a>
+						<a href="https://linkedin.com/in/arsya-alifian-widiatmoko-847089190" class="btn btn-default btn-lg social-button link-linkedin"><i class="fa fa-linkedin"></i>
+						</a>
+          				<a href="https://github.com/KiraneTMS" class="btn btn-default btn-lg social-button link-github"><i class="fa fa-github"></i>
+						</a>
+				</div>
+			</div>
+		</div>
+	</footer>
 
-        </div>
+    
+    <!-- Bootstrap core JavaScript -->
+    <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+	<script>
+		$( window ).resize( function() {
+			centerSplash();
+		});
+		
+		!function($){
+		
+			"use strict";
+		
+			var Typed = function(el, options){
+		
+				// chosen element to manipulate text
+				this.el = $(el);
+				// options
+				this.options = $.extend({}, $.fn.typed.defaults, options);
+		
+				// text content of element
+				this.text = this.el.text();
+		
+				// typing speed
+				this.typeSpeed = this.options.typeSpeed;
+		
+				// amount of time to wait before backspacing
+				this.backDelay = this.options.backDelay;
+		
+				// input strings of text
+				this.strings = this.options.strings;
+		
+				// character number position of current string
+				this.strPos = 0;
+		
+				// current array position
+				this.arrayPos = 0;
+		
+				// current string based on current values[] array position
+				this.string = this.strings[this.arrayPos];
+		
+				// number to stop backspacing on.
+				// default 0, can change depending on how many chars
+				// you want to remove at the time
+				this.stopNum = 0;
+		
+				// Looping logic
+				this.loop = this.options.loop;
+				this.loopCount = this.options.loopCount;
+				this.curLoop = 1;
+				if (this.loop === false){
+					// number in which to stop going through array
+					// set to strings[] array (length - 1) to stop deleting after last string is typed
+					this.stopArray = this.strings.length-1;
+				}
+				else{
+					this.stopArray = this.strings.length;
+				}
+		
+				// All systems go!
+				this.init();
+				this.build();
+			}
+		
+				Typed.prototype =  {
+		
+					constructor: Typed
+		
+					, init: function(){
+						// begin the loop w/ first current string (global self.string)
+						// current string will be passed as an argument each time after this
+						this.typewrite(this.string, this.strPos);
+					}
+		
+					, build: function(){
+						this.el.after("<span id=\"typed-cursor\">|</span>");
+					}
+		
+					// pass current string state to each function
+					, typewrite: function(curString, curStrPos){
+		
+						// varying values for setTimeout during typing
+						// can't be global since number changes each time loop is executed
+						var humanize = Math.round(Math.random() * (100 - 30)) + this.typeSpeed;
+						var self = this;
+		
+						// ------------- optional ------------- //
+						// backpaces a certain string faster
+						// ------------------------------------ //
+						// if (self.arrayPos == 1){
+						//  self.backDelay = 50;
+						// }
+						// else{ self.backDelay = 500; }
+		
+						// containg entire typing function in a timeout
+						setTimeout(function() {
+		
+							// make sure array position is less than array length
+							if (self.arrayPos < self.strings.length){
+		
+								// start typing each new char into existing string
+								// curString is function arg
+								self.el.text(self.text + curString.substr(0, curStrPos));
+		
+								// check if current character number is the string's length
+								// and if the current array position is less than the stopping point
+								// if so, backspace after backDelay setting
+								if (curStrPos > curString.length && self.arrayPos < self.stopArray){
+									clearTimeout(clear);
+									var clear = setTimeout(function(){
+										self.backspace(curString, curStrPos);
+									}, self.backDelay);
+								}
+		
+								// else, keep typing
+								else{
+									// add characters one by one
+									curStrPos++;
+									// loop the function
+									self.typewrite(curString, curStrPos);
+									// if the array position is at the stopping position
+									// finish code, on to next task
+									if (self.loop === false){
+										if (self.arrayPos === self.stopArray && curStrPos === curString.length){
+											// animation that occurs on the last typed string
+											// fires callback function
+											var clear = self.options.callback();
+											clearTimeout(clear);
+										}
+									}
+								}
+							}
+							// if the array position is greater than array length
+							// and looping is active, reset array pos and start over.
+							else if (self.loop === true && self.loopCount === false){
+								self.arrayPos = 0;
+								self.init();
+							}
+								else if(self.loopCount !== false && self.curLoop < self.loopCount){
+									self.arrayPos = 0;
+									self.curLoop = self.curLoop+1;
+									self.init();
+								}
+		
+						// humanized value for typing
+						}, humanize);
+		
+					}
+		
+					, backspace: function(curString, curStrPos){
+		
+						// varying values for setTimeout during typing
+						// can't be global since number changes each time loop is executed
+						var humanize = Math.round(Math.random() * (100 - 30)) + this.typeSpeed;
+						var self = this;
+		
+						setTimeout(function() {
+		
+							// ----- this part is optional ----- //
+							// check string array position
+							// on the first string, only delete one word
+							// the stopNum actually represents the amount of chars to
+							// keep in the current string. In my case it's 14.
+							if (self.arrayPos == 1, 2, 3, 4){
+								self.stopNum = 0;
+							}
+							//every other time, delete the whole typed string
+							//else{
+								//self.stopNum = 0;
+							//}
+		
+							// ----- continue important stuff ----- //
+							// replace text with current text + typed characters
+							self.el.text(self.text + curString.substr(0, curStrPos));
+		
+							// if the number (id of character in current string) is
+							// less than the stop number, keep going
+							if (curStrPos > self.stopNum){
+								// subtract characters one by one
+								curStrPos--;
+								// loop the function
+								self.backspace(curString, curStrPos);
+							}
+							// if the stop number has been reached, increase
+							// array position to next string
+							else if (curStrPos <= self.stopNum){
+								clearTimeout(clear);
+								var clear = self.arrayPos = self.arrayPos+1;
+								// must pass new array position in this instance
+								// instead of using global arrayPos
+								self.typewrite(self.strings[self.arrayPos], curStrPos);
+							}
+		
+						// humanized value for typing
+						}, humanize);
+		
+					}
+		
+				}
+		
+			$.fn.typed = function (option) {
+				return this.each(function () {
+					var $this = $(this)
+					, data = $this.data('typed')
+					, options = typeof option == 'object' && option
+					if (!data) $this.data('typed', (data = new Typed(this, options)))
+					if (typeof option == 'string') data[option]()
+				});
+			}
+		
+			$.fn.typed.defaults = {
+				strings: ["Hello, hola, hi! ", "Welcome to my website ", "Go on, scroll down", ":)"],
+				// typing and backspacing speed
+				typeSpeed: 50, // speed decreases as number increased
+				// time before backspacing
+				backDelay: 100,
+				// loop
+				loop: true,
+				// false = infinite
+				loopCount: false,
+				// ending callback function
+				callback: function(){ null }
+			}
+		
+		
+		}(window.jQuery);
+		
+		
+		$(function(){
+		
+				$("#typed").typed({
+					strings: ["web developer","anime artist","android develover"], //Strings to display when typing
+					typeSpeed: 40,
+					backDelay: 600,
+					loop: true,
+					// defaults to false for infinite loop
+					loopCount: false,
+					callback: function(){ foo(); }
+				});
+		
+				function foo(){ console.log("Callback"); }
+		
+			});
+			function sendMail() {
+				var link = "mailto:arsyaalifian4@gmail.com"
+						+ "?cc="+document.getElementById('email').value
+						+ "&subject=" + encodeURIComponent("Hi Im "+document.getElementById('name').value+"-"+document.getElementById('phone').value)
+						+ "&body=" + encodeURIComponent(document.getElementById('message').value)
+				;
+				
+				window.location.href = link;
+			}
 
-     </div>
-</footer>
-
-</body>
+	</script>
+  </body>
 </html>
